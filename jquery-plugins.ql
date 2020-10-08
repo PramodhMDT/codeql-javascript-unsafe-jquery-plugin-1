@@ -1,7 +1,7 @@
 
 import javascript
 
-from DataFlow::FunctionNode propSource
+from DataFlow::ValueNode propSource
 where
     propSource = jquery().getAPropertyRead("fn").getAPropertySource()
 select propSource
