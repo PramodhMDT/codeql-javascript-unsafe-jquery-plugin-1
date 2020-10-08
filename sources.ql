@@ -1,10 +1,9 @@
 import javascript
 
 predicate isSource(DataFlow::Node source) {
-    exists(DataFlow::FunctionNode fn, DataFlow::ParameterNode opt |
+    exists(DataFlow::FunctionNode fn |
         fn = jquery().getAPropertyRead("fn").getAPropertySource() and
-        opt = fn.getLastParameter() and
-        source = fn
+        source = fn.getLastParameter()
     )
 }
 
